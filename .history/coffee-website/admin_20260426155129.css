@@ -1,0 +1,205 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI';
+  background: #F5EFEA;
+}
+
+.dashboard {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #8B5E3C;
+  color: white;
+  height: 100vh;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.sidebar li:hover,
+.sidebar .active {
+  background: #A97458;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Topbar */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.topbar input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Top bar layout */
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Search box */
+.search-box {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  background: #f1f1f1;
+  width: 220px;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Add Product Button */
+.add-product-btn {
+  background: #8B5E3C !important;
+  color: white !important;
+  border: none;
+  padding: 10px 18px !important;
+  border-radius: 10px !important;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+/* Hover effect */
+.add-product-btn:hover {
+  background: #6f472d;
+  transform: translateY(-2px);
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  flex: 1;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+
+/* Table Styling */
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.product-table th {
+  background: #8B5E3C;
+  color: white;
+  padding: 12px;
+  text-align: center;
+}
+
+.product-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+/* Status Badge */
+.status {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.status.active {
+  background: #d4f5d4;
+  color: green;
+}
+
+/* Action Buttons */
+.action-btn {
+  border: none;
+  padding: 6px 10px;
+  margin: 2px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.action-btn.edit {
+  background: #eee;
+}
+
+.action-btn.delete {
+  background: #f8d7da;
+}
+
+/* Orders Table */
+.orders {
+  margin-top: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background: #8B5E3C;
+  color: white;
+}
+
+button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.deliver {
+  background: green;
+  color: white;
+}
+
+.pending {
+  background: orange;
+  color: white;
+}

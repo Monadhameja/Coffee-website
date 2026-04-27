@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coffee Bliss Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url('https://images.unsplash.com/photo-1509042239860-f550ce710b93');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    padding: 20px;
+
+      align-items: center;
+    }
+
+    .login-box {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 35px 30px;
+  border-radius: 16px;
+  width: 340px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.6s ease;
+}
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+/* Title */
+.login-box h2 {
+  margin-bottom: 5px;
+  color: #8B5E3C;
+  font-weight: 600;
+}
+
+/* Subtitle */
+.login-box p {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+.login-box input,
+.login-box select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* Input focus effect */
+.login-box input:focus,
+.login-box select:focus {
+  border-color: #8B5E3C;
+  box-shadow: 0 0 5px rgba(139, 94, 60, 0.3);
+}
+
+/* Button */
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background: #8B5E3C;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Button hover */
+.login-box button:hover {
+  background: #6f452c;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+    select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+    .logo {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="login-box">
+  <div class="logo">☕ Coffee Bliss</div>
+
+  <h2>Welcome Back</h2>
+  <p>Please login to continue</p>
+
+  <input id="username" placeholder="Username">
+  <input id="password" type="password" placeholder="Password">
+
+  <select id="role">
+    <option value="user">👤 User</option>
+    <option value="admin">🛠 Admin</option>
+  </select>
+
+  <button onclick="login()">Login</button>
+</div>
+
+<script>
+function login() {
+  let user = document.getElementById("username").value;
+  let pass = document.getElementById("password").value;
+
+  if (user === "admin" && pass === "1234") {
+    localStorage.setItem("role", "admin");
+    window.location.href = "admin.html";
+  } else if (user && pass) {
+    localStorage.setItem("role", "user");
+    window.location.href = "index.html";
+  } else {
+    alert("Invalid login ❌");
+  }
+}
+</script>
+
+</body>
+</html>

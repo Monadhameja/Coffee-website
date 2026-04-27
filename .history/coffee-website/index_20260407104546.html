@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffee Bliss ☕</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1 class="logo">Coffee Bliss</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+   <button id="cart-btn" class="cart-btn">🛒</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h1>Welcome to Coffee Bliss</h1>
+    <p>Your perfect brew, every time ☕</p>
+    <button class="btn" onclick="scrollToMenu()">Explore Menu</button>
+    
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu" id="menu">
+    <h2>Our Special Menu</h2>
+    <p>Freshly brewed coffees and delicious snacks just for you!</p>
+
+    <div class="menu-controls">
+    <input type="text" id="search" placeholder="Search coffee..." />
+
+    <select id="filter">
+      <option value="all">All</option>
+      <option value="hot">Hot ☕</option>
+      <option value="dessert">Desserts 🍰</option>
+    </select>
+  </div>
+
+    <div class="menu-grid" id="menu-list">
+      <!-- Menu items added dynamically by JS -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+<section class="contact" id="contact">
+  <h2>Contact Us</h2>
+  <p>We’d love to hear from you! Reach out for orders or inquiries.</p>
+
+  <div class="contact-details">
+    <div>
+      <h3>📍 Address</h3>
+      <p>47 NewTown, Kolkata ,India</p>
+    </div>
+    <div>
+      <h3>📞 Phone</h3>
+      <p>+91 8011114702</p>
+    </div>
+    <div>
+      <h3>✉️ Email</h3>
+      <p>mona.dhameja2005@gmail.com</p>
+    </div>
+  </div>
+
+  <h3>Send us a message</h3>
+  <form id="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+</section>
+
+
+  <!-- Cart Modal -->
+  <div id="cart-modal" class="cart-modal hidden">
+    <div class="cart-content">
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <h3 id="total">Total: ₹0</h3>
+      <button id="checkout-btn" class="btn">Checkout</button>
+      <button id="close-cart" class="btn close-btn">Close</button>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <!-- Checkout Modal -->
+  <div id="checkout-modal" class="checkout-modal hidden">
+    <div class="checkout-content">
+      <p id="order-status"></p>
+      <h2>Checkout</h2>
+      <form id="checkout-form">
+        <input type="text" placeholder="Full Name" required>
+        <input type="text" placeholder="Delivery Address" required>
+        <select required>
+          <option value="">Select Payment Method</option>
+          <option>💳 Credit/Debit Card</option>
+          <option>📱 UPI</option>
+          <option>💵 Cash on Delivery</option>
+        </select>
+        <button type="submit" class="btn">Confirm Order</button>
+      </form>
+      <button id="close-checkout" class="btn close-btn">Cancel</button>
+      <button onclick="cancelOrder()" class="btn cancel-btn">
+  Cancel Order ❌
+</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Coffee Bliss. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
